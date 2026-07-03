@@ -18,22 +18,28 @@ function findPostById(array, id) {
   });
 }
 
-test('La funzione verifica se il post restituito è corretto', () => {
-  expect(findPostById(posts, 2)).toEqual({
-    id: 2,
-    title: 'Second Object',
-    slug: 'secondo-object',
+describe('La funzione verifica se il post restituito è corretto dato un array ed un id ', () => {
+  test('La funzione verifica se il post restituito è corretto', () => {
+    expect(findPostById(posts, 1)).toEqual({
+      id: 1,
+      title: 'Primo Object',
+      slug: 'primo-object',
+    });
   });
 
-  expect(findPostById(posts, 1)).toEqual({
-    id: 1,
-    title: 'Primo Object',
-    slug: 'primo-object',
+  test('La funzione verifica se il post restituito è corretto', () => {
+    expect(findPostById(posts, 2)).toEqual({
+      id: 2,
+      title: 'Second Object',
+      slug: 'secondo-object',
+    });
   });
 
-  expect(findPostById(posts, 3)).toEqual({
-    id: 3,
-    title: 'Terzo Object',
-    slug: 'terzo-object',
+  test('La funzione verifica se il post restituito è corretto', () => {
+    expect(findPostById(posts, 3)).toEqual({
+      id: 3,
+      title: 'Terzo Object',
+      slug: 'terzo-object',
+    });
   });
 });

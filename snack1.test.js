@@ -2,9 +2,7 @@
 
 // 👉 "La funzione getInitials restituisce le iniziali di un nome completo."
 
-function getInitials(nome, cognome) {
-  return nome.charAt(0) + cognome.charAt(0);
-}
+const getInitials = require('./getInitials.js');
 
 test('La funzione "getInitials" restituisce le iniziali di un nome completo', () => {
   expect(getInitials('Claudia', 'Destris')).toBe('CD');

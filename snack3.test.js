@@ -6,6 +6,7 @@ function average(array) {
   let sum = 0;
   array.forEach((single) => {
     sum += single;
+    return sum;
   });
 
   return sum / array.length;
